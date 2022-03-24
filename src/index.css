@@ -1,3 +1,29 @@
+/**
+--- 01 TYPOGRAPHY SYSTEM
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Font weights
+Default: 400
+Bold: 700
+- Line heights
+- Letter spacing
+
+--- 02 WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+--- 03 COLORS
+- Primary: #fa9daa
+- Tints:
+- Shades: 
+- Accents:
+- Greys
+
+--- 04 SHADOWS
+
+--- 05 BORDER-RADIUS
+
+*/
 @font-face {
   font-family: Mikhak;
   src: url("./fonts/Mikhak-VF-FD.woff2") format("woff2"),
