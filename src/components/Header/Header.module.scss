@@ -1,0 +1,11 @@
+@use "sass" as *;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $space-10;
+  padding: 0 $space-8;
+  background-color: $color-primary;
+  position: relative;
+}
