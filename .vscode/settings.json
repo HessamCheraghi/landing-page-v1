@@ -1,0 +1,14 @@
+{
+  "workbench.colorCustomizations": {
+    "sash.hoverBorder": "#fcced4",
+    "titleBar.activeBackground": "#fa9daa",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#fa9daa99",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#FA9DAA",
+  "cSpell.words": ["browserslist", "Mikhak", "stylelint"],
+  "stylelint.validate": ["css", "scss"],
+  "css.validate": false,
+  "scss.validate": false
+}
