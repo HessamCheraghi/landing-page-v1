@@ -47,4 +47,5 @@ body {
   font-family: Mikhak, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
 }
