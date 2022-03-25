@@ -1,4 +1,4 @@
-import styles from "./CTA.module.scss";
+// import styles from "./CTA.module.scss";
 
 export default function CTA() {
   return <div>CTA</div>;
