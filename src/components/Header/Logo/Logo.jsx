@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <a href="#hero" className={styles.container}>
       <WheelLogo className={styles.logoImg} />
-      <p className={styles.logoText}>پست پیشتاز</p>
+      <p className={styles.logoText}>الو بنزین</p>
     </a>
   );
 }

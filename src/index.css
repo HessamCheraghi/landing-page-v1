@@ -14,7 +14,7 @@ Bold: 700
 
 --- 03 COLORS
 - Primary: #fa9daa
-- Tints:
+- Tints: #fbacb9
 - Shades: 
 - Accents:
 - Greys
@@ -31,6 +31,22 @@ Bold: 700
   font-display: swap;
 }
 
+@font-face {
+  font-family: Vazirmatn;
+  src: url("./fonts/Vazirmatn-Regular.woff2") format("woff2"),
+    url("./fonts/Vazirmatn-Regular.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url("./fonts/Vazirmatn-Bold.woff2") format("woff2"),
+    url("./fonts/Vazirmatn-Bold.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 700;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +56,7 @@ Bold: 700
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  direction: rtl;
 }
 
 body {
@@ -47,5 +64,10 @@ body {
   font-family: Mikhak, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  direction: rtl;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }

@@ -1,0 +1,11 @@
+@mixin transition-base {
+  transition: all 0.3s;
+}
+
+@mixin grid($column) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+}
+@mixin center-m {
+  margin: 0 auto;
+}

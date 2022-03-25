@@ -7,7 +7,7 @@
     "titleBar.inactiveForeground": "#15202b99"
   },
   "peacock.color": "#FA9DAA",
-  "cSpell.words": ["browserslist", "Mikhak", "stylelint"],
+  "cSpell.words": ["browserslist", "Mikhak", "stylelint", "Vazirmatn", "webp"],
   "stylelint.validate": ["css", "scss"],
   "css.validate": false,
   "scss.validate": false
