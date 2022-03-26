@@ -1,46 +1,99 @@
 @use "sass" as *;
 
 .background {
-  min-height: calc(100vh - $space-10);
-  background: $color-primary;
-  background: linear-gradient(
-    180deg,
-    $color-primary 20%,
-    $color-primary-tint-1 100%
-  );
-  padding: $space-8 0 $space-11;
+  position: relative;
+  height: calc(100vh - $space-10);
+  color: $color-hero;
+  background-image: linear-gradient($color-primary, $color-primary-tint-1);
 }
 
 .container {
-  max-width: 140rem;
-  padding: 0 $space-7;
-  column-gap: $space-11;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include center-m;
+  position: absolute;
+  width: 140rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  // on top of image and blur effects
+  z-index: 2;
+}
+
+.textBox {
+  width: 50%;
+}
+
+.header {
+  font-size: $font-size-10;
+  margin-bottom: $space-7;
+  line-height: 1.2;
+}
+
+.subheader {
+  font-size: $font-size-6;
+  margin-bottom: $space-8;
+  line-height: 1.5;
+}
+
+.download {
+  display: inline-block;
+  font-family: inherit;
+  border: 2px solid $color-link-hero;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-3;
+  padding: $space-4 $space-6;
+  color: $color-primary;
+  background-color: $color-link-hero;
+  border-radius: 11px;
+  @include transition-base;
+
+  &:hover,
+  &:active {
+    color: $color-link-hero;
+    background-color: $color-primary;
+  }
 }
 
 .imgBox {
-  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
   height: 100%;
-  display: block;
+  overflow: hidden;
+}
+
+.blurImg {
   position: relative;
+  margin-bottom: $space-10;
 
   &::before {
-    display: block;
     content: "";
+    display: block;
     position: absolute;
+    background-color: $color-primary-tint-2;
     width: 100%;
-    height: 100%;
-    box-shadow: inset -1.6rem 2.4rem 2.4rem 2.4rem $color-primary;
-    transform: scale(-110%, 110%);
+    height: $space-11;
+    transform: translate(-20%, -40%);
+    filter: blur(2rem);
+
+    // on top of image
     z-index: 1;
-    border-radius: 4.8rem;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: $color-primary-tint-2;
+    width: $space-11;
+    height: 100%;
+    transform: translate(50%, -100%);
+    filter: blur(2rem);
+
+    // on top of image
+    z-index: 1;
   }
 }
 
 .img {
-  transform: scale(-110%, 110%);
-  border-radius: 4.8rem;
+  transform: scaleX(-1);
 }
