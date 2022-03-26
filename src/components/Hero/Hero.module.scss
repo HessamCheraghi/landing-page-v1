@@ -5,6 +5,12 @@
   height: calc(100vh - $space-10);
   color: $color-hero;
   background-image: linear-gradient($color-primary, $color-primary-tint-1);
+
+  &::after {
+    content: "";
+    display: block;
+    box-shadow: 0 -3rem 6rem 3rem $color-primary-tint-1;
+  }
 }
 
 .container {
@@ -55,7 +61,7 @@
 
 .imgBox {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   height: 100%;
   overflow: hidden;
@@ -69,7 +75,7 @@
     content: "";
     display: block;
     position: absolute;
-    background-color: $color-primary-tint-2;
+    background-color: $color-primary;
     width: 100%;
     height: $space-11;
     transform: translate(-20%, -40%);

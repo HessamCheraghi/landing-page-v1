@@ -1,0 +1,73 @@
+@use "sass" as *;
+
+.background {
+  position: relative;
+
+  &:nth-child(2) {
+    margin-top: $space-12;
+  }
+
+  &:nth-child(3) {
+    margin-top: $space-8;
+  }
+
+  svg {
+    position: absolute;
+    z-index: -1;
+    right: -10%;
+    top: -15%;
+    transform: scaleX(-1);
+  }
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 0 30px #0000001a;
+  border-radius: 11px;
+  padding: $space-7;
+  width: 36rem;
+}
+
+.cardImg {
+  width: $space-11;
+  height: $space-11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
+  border-radius: 0.7rem;
+  margin-bottom: $space-7;
+
+  svg {
+    position: static;
+    z-index: 0;
+  }
+}
+
+.content {
+  margin-bottom: $space-8;
+  color: $color-card-text;
+  line-height: $font-size-7;
+}
+
+.title {
+  font-weight: bold;
+  font-size: $font-size-6;
+  line-height: $font-size-7;
+  margin-bottom: $space-4;
+}
+
+.description {
+  font-weight: normal;
+  font-size: $font-size-3;
+  line-height: $font-size-7;
+}
+
+.explore {
+  font-family: inherit;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--color-text);
+  background-color: var(--color-button);
+  padding: $space-5 $space-8;
+}
