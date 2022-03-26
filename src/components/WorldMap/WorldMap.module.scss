@@ -1,0 +1,29 @@
+@use "sass" as *;
+
+.container {
+  padding-top: $space-11;
+  margin-bottom: $space-11;
+  background-color: $color-world-background;
+}
+
+.subheading {
+  font-size: $font-size-6;
+  line-height: $font-size-9;
+  font-weight: normal;
+  margin: $space-4 0;
+  text-align: center;
+  color: $color-subheading;
+}
+
+.secondary {
+  font-size: $font-size-8;
+  line-height: $font-size-12;
+  font-weight: normal;
+  color: $color-secondary;
+  text-align: center;
+  margin-bottom: $space-10;
+}
+
+.map {
+  @include center-m;
+}
