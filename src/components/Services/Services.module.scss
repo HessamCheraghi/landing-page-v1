@@ -51,13 +51,13 @@
   &:nth-child(4) {
     grid-column: 3/4;
   }
-}
 
-.item img {
-  transform: scale(105%);
-  @include transition-base;
+  img {
+    transform: scale(105%);
+    @include transition-base;
 
-  &:hover {
-    transform: scale(115%);
+    &:hover {
+      transform: scale(115%);
+    }
   }
 }
