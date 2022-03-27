@@ -13,7 +13,7 @@
     display: inline-block;
     text-decoration: none;
     color: $color-link-hero;
-    font-weight: $font-weight-default;
+    font-weight: normal;
     font-size: $font-size-4;
     @include transition-base;
   }
@@ -29,7 +29,7 @@
   text-decoration: none;
   font-family: inherit;
   border: 2px solid $color-link-hero;
-  font-weight: $font-weight-bold;
+  font-weight: bold;
   font-size: $font-size-3;
   padding: $space-4 $space-6;
   color: $color-primary;

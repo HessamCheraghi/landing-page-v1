@@ -1,0 +1,98 @@
+@use "sass" as *;
+
+.container {
+  padding-bottom: $space-12;
+  background-image: url("../../images/Review.svg");
+  background-position: center 70%;
+  background-repeat: no-repeat;
+}
+
+.subheading {
+  font-size: $font-size-6;
+  line-height: $font-size-9;
+  font-weight: normal;
+  margin: $space-4 0;
+  text-align: center;
+  color: $color-subheading;
+}
+
+.secondary {
+  font-size: $font-size-8;
+  line-height: $font-size-12;
+  font-weight: normal;
+  color: $color-secondary;
+  text-align: center;
+  margin-bottom: $space-10;
+}
+
+.cardContainer {
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: $space-9;
+  @include center-m;
+}
+
+.card {
+  width: 56.8rem;
+  height: fit-content;
+  border-radius: 11px;
+  position: relative;
+  padding: $space-7;
+  background: #fef5ff;
+  box-shadow: 0 4px 26px #3b00001a;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  &:nth-child(1) {
+    left: $space-8;
+    top: $space-11;
+  }
+
+  &:nth-child(2) {
+    right: $space-8;
+  }
+
+  &:nth-child(3) {
+    top: $space-11;
+  }
+
+  &:nth-child(4) {
+    width: 48rem;
+  }
+}
+
+.text {
+  font-size: $font-size-3;
+  line-height: $font-size-6;
+  margin-bottom: $space-6;
+}
+
+.avatarBox {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: $space-5;
+}
+
+.avatar {
+  padding-top: $space-3;
+  width: $space-10;
+  height: $space-10;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #3b00001a;
+}
+
+.name {
+  font-weight: normal;
+  font-size: $font-size-6;
+  line-height: $font-size-9;
+  padding-inline-start: $space-5;
+}
+
+.rate {
+  transform: scaleX(-1);
+}
