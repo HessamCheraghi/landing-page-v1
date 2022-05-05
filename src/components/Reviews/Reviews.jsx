@@ -1,13 +1,42 @@
 import styles from "./Reviews.module.scss";
 import data from "./data";
+import { motion } from "framer-motion";
+
 export default function Reviews() {
+  const variants = {
+    visible: { y: 0, transition: { duration: 1 } },
+    hidden: { y: 120 },
+  };
   return (
     <div className={styles.container}>
-      <p className={styles.subheading}>نظرات مشتری</p>
-      <h2 className={styles.secondary}>مشتریان سابق درباره ما چی میگن؟</h2>
+      <motion.p
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={variants}
+        className={styles.subheading}
+      >
+        نظرات مشتری
+      </motion.p>
+      <motion.h2
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={variants}
+        className={styles.secondary}
+      >
+        مشتریان سابق درباره ما چی میگن؟
+      </motion.h2>
       <div className={styles.cardContainer}>
         {data.map((datum) => (
-          <div key={datum.id} className={styles.card}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "100px" }}
+            variants={variants}
+            key={datum.id}
+            className={styles.card}
+          >
             <div className={styles.avatarBox}>
               <div className={styles.avatar}>
                 <img src={datum.avatar} alt="avatar" />
@@ -16,7 +45,7 @@ export default function Reviews() {
             </div>
             <p className={styles.text}>{datum.review}</p>
             <img className={styles.rate} src={datum.rate} alt="rating" />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

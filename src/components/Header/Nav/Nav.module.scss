@@ -5,6 +5,10 @@
   display: flex;
   align-items: center;
   gap: $space-8;
+
+  li {
+    display: inline-block;
+  }
 }
 
 .link {
@@ -14,7 +18,7 @@
     text-decoration: none;
     color: $color-link-hero;
     font-weight: normal;
-    font-size: $font-size-4;
+    font-size: $font-size-5;
     @include transition-base;
   }
 }

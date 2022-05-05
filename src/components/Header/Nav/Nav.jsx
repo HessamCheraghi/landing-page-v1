@@ -25,25 +25,6 @@ export default function Nav({ delay }) {
 
   // animations
   const animationDelay = delay ?? 0;
-  const animateLinks = {
-    visible: (i) => ({
-      y: 0,
-      transition: {
-        delay: i * 0.2 + animationDelay,
-      },
-    }),
-    hidden: { y: "-200%" },
-  };
-  const animateButton = {
-    visible: {
-      y: 0,
-      transition: {
-        delay: list.length * 0.2 + animationDelay,
-        duration: 0.15,
-      },
-    },
-    hidden: { y: "-200%" },
-  };
 
   return (
     <nav
@@ -54,10 +35,9 @@ export default function Nav({ delay }) {
       <ul className={styles.list}>
         {list.map((item, i) => (
           <motion.li
-            custom={i}
-            initial="hidden"
-            animate="visible"
-            variants={animateLinks}
+            initial={{ y: "-200%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: i * 0.2 + animationDelay }}
             key={item.label}
           >
             <a href={item.href} className={styles.link}>
@@ -67,9 +47,9 @@ export default function Nav({ delay }) {
         ))}
         <li>
           <motion.button
-            initial="hidden"
-            animate="visible"
-            variants={animateButton}
+            initial={{ y: "-200%" }}
+            animate={{ y: 0 }}
+            transition={{ delay: 1 + animationDelay, duration: 0.2 }}
             className={styles.download}
           >
             دانلود اپلیکیشن برای موبایل

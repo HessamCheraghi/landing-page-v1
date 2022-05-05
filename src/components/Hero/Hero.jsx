@@ -1,12 +1,17 @@
 import styles from "./Hero.module.scss";
-
+import { motion } from "framer-motion";
 import HeroPNG from "images/Hero.png";
 import HeroWEBP from "images/Hero.webp";
 
 export default function Hero() {
   return (
     <div className={styles.background}>
-      <div className={styles.container}>
+      <motion.div
+        initial={{ opacity: 0, y: 150 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "tween", duration: 1, delay: 1 }}
+        className={styles.container}
+      >
         <div className={styles.textBox}>
           <h1 className={styles.header}>
             هر جا که به کمک فوری نیاز داشتید
@@ -30,7 +35,7 @@ export default function Hero() {
             />
           </picture>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
