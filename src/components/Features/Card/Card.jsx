@@ -1,11 +1,12 @@
 import styles from "./Card.module.scss";
 import { motion } from "framer-motion";
 
-export default function Card({ data }) {
+export default function Card({ data, delay }) {
   return (
     <motion.div
-      viewport={{ once: true, margin: "250px" }}
+      viewport={{ once: true, amount: 0.2 }}
       initial={{ opacity: 0, y: 300 }}
+      transition={{ duration: 0.5, delay: delay * 0.2 }}
       whileInView={{ opacity: 1, y: 0 }}
       className={styles.background}
     >

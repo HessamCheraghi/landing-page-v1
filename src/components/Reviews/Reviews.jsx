@@ -8,7 +8,7 @@ export default function Reviews() {
     hidden: { y: 120 },
   };
   return (
-    <div className={styles.container}>
+    <div id="reviews" className={styles.container}>
       <motion.p
         initial="hidden"
         whileInView="visible"
@@ -32,7 +32,7 @@ export default function Reviews() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "100px" }}
+            viewport={{ once: true, amount: 0.5 }}
             variants={variants}
             key={datum.id}
             className={styles.card}

@@ -3,7 +3,7 @@ import phone from "images/phone.png";
 
 export default function CTA() {
   return (
-    <div className={styles.container}>
+    <div id="cta" className={styles.container}>
       <img src={phone} alt="تلفن همراه" />
       <div className={styles.textBox}>
         <h2 className={styles.secondary}>

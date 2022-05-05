@@ -5,7 +5,7 @@ import HeroWEBP from "images/Hero.webp";
 
 export default function Hero() {
   return (
-    <div className={styles.background}>
+    <div id="hero" className={styles.background}>
       <motion.div
         initial={{ opacity: 0, y: 150 }}
         animate={{ opacity: 1, y: 0 }}

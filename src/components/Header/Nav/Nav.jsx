@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 export default function Nav({ delay }) {
   const list = [
-    { label: "امکانات", href: "#" },
-    { label: "خدمات", href: "#" },
-    { label: "نظرات مشتریان", href: "#" },
-    { label: "سوالات متداول", href: "#" },
-    { label: "تماس با ما", href: "#" },
+    { label: "امکانات", href: "#features" },
+    { label: "مناطق تحت پوشش", href: "#world-map" },
+    { label: "نظرات مشتریان", href: "#reviews" },
+    { label: "خدمات", href: "#services" },
+    { label: "تماس با ما", href: "#cta" },
   ];
   // hover effects
   const handelHover = function (e) {

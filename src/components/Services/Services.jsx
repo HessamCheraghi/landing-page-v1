@@ -6,11 +6,11 @@ import service4 from "images/Service4.png";
 import { motion } from "framer-motion";
 export default function Services() {
   const variants = {
-    visible: { y: 0, transition: { duration: 1 } },
-    hidden: { y: 120 },
+    visible: { y: 0, opacity: 1, transition: { duration: 1 } },
+    hidden: { y: 120, opacity: 0 },
   };
   return (
-    <div className={styles.container}>
+    <div id="services" className={styles.container}>
       <motion.p
         initial="hidden"
         whileInView="visible"

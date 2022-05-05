@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Logo({ delay }) {
   const animationDelay = delay ?? 0;
   return (
-    <a href="#hero" className={styles.container}>
+    <a href="#header" className={styles.container}>
       <motion.svg
         initial={{ x: 300 }}
         animate={{ x: 0 }}

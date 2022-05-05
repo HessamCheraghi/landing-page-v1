@@ -9,7 +9,7 @@ export default function Features() {
     hidden: { opacity: 0, y: 120 },
   };
   return (
-    <div className={styles.container}>
+    <div id="features" className={styles.container}>
       <motion.p
         initial="hidden"
         whileInView="visible"

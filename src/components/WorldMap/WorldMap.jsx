@@ -7,7 +7,7 @@ export default function WorldMap() {
     hidden: { opacity: 0, y: 120 },
   };
   return (
-    <div className={styles.container}>
+    <div id="world-map" className={styles.container}>
       <motion.p
         initial="hidden"
         whileInView="visible"
