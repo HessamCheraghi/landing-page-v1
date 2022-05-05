@@ -53,6 +53,10 @@
     color: $color-link-hero;
     background-color: $color-primary;
   }
+
+  &:active {
+    transform: translateY(0.5rem);
+  }
 }
 
 .img {

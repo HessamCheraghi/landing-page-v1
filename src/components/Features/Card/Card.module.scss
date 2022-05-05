@@ -67,7 +67,18 @@
   font-family: inherit;
   border: none;
   border-radius: 0.5rem;
+  opacity: 0.8;
   color: var(--color-text);
   background-color: var(--color-button);
   padding: $space-5 $space-8;
+  @include transition-base;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+
+  &:active {
+    transform: translateY(0.5rem);
+  }
 }
