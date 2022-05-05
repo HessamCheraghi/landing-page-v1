@@ -38,7 +38,7 @@ export default function Nav({ delay }) {
     visible: {
       y: 0,
       transition: {
-        delay: list.length * 0.2,
+        delay: list.length * 0.2 + animationDelay,
         duration: 0.15,
       },
     },
