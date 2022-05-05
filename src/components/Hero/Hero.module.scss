@@ -12,10 +12,9 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 45fr 55fr;
   width: 140rem;
   margin: 0 auto;
-  gap: 6rem;
 }
 
 .textBox {
