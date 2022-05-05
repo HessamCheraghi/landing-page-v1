@@ -1,0 +1,82 @@
+@use "sass" as *;
+
+.container {
+  max-width: 120rem;
+  background-color: $color-call-to-action;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto $space-12;
+
+  img {
+    filter: drop-shadow(0 0 9rem #ffafaf);
+  }
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  padding: $space-7;
+}
+
+.secondary {
+  font-size: $font-size-8;
+  line-height: $font-size-12;
+  font-weight: normal;
+  color: $color-secondary;
+  margin-bottom: $space-6;
+}
+
+.subheading {
+  font-size: $font-size-5;
+  line-height: $font-size-8;
+  font-weight: normal;
+  color: $color-secondary;
+  margin-bottom: $space-8;
+}
+
+.mailbox {
+  --input-width: 48rem;
+
+  position: relative;
+
+  input {
+    font-family: inherit;
+    background: white;
+    box-shadow: 0 0 2.5rem #00000017;
+    border-radius: 1.3rem;
+    border: none;
+    width: var(--input-width);
+    padding: $space-5 $space-7 $space-5 $space-9;
+    font-size: $font-size-5;
+    line-height: $font-size-7;
+    outline: none;
+
+    @include transition-base;
+
+    &:focus {
+      box-shadow: 0 0 2.5rem #ff2a2a4b;
+    }
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+}
+
+.submit {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: $color-primary;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  right: calc(var(--input-width) - 5.6rem);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
