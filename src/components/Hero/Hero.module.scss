@@ -1,31 +1,28 @@
 @use "sass" as *;
 
 .background {
-  position: relative;
-  height: calc(100vh - $space-10);
+  display: flex;
+  align-items: center;
+
+  // whole viewport height minus navbar height
+  min-height: calc(100vh - $space-10);
   color: $color-hero;
   background-image: linear-gradient($color-primary, $color-primary-tint-1);
-
-  &::after {
-    content: "";
-    display: block;
-    box-shadow: 0 -3rem 6rem 3rem $color-primary-tint-1;
-  }
 }
 
 .container {
-  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 140rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  // on top of image and blur effects
-  z-index: 2;
+  margin: 0 auto;
+  gap: 6rem;
 }
 
 .textBox {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .header {
@@ -56,47 +53,6 @@
   &:active {
     color: $color-link-hero;
     background-color: $color-primary;
-  }
-}
-
-.imgBox {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  overflow: hidden;
-}
-
-.blurImg {
-  position: relative;
-  margin-bottom: $space-10;
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: $color-primary;
-    width: 100%;
-    height: $space-11;
-    transform: translate(-20%, -40%);
-    filter: blur(2rem);
-
-    // on top of image
-    z-index: 1;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: $color-primary-tint-2;
-    width: $space-11;
-    height: 100%;
-    transform: translate(50%, -100%);
-    filter: blur(2rem);
-
-    // on top of image
-    z-index: 1;
   }
 }
 

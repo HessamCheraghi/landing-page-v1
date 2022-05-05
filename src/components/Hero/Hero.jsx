@@ -20,9 +20,7 @@ export default function Hero() {
           </p>
           <button className={styles.download}>دانلود اپلیکیشن</button>
         </div>
-      </div>
-      <div className={styles.imgBox}>
-        <div className={styles.blurImg}>
+        <div className={styles.imgBox}>
           <picture>
             <source srcSet={HeroWEBP} type="image/webp" />
             <img
