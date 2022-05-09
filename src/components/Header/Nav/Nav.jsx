@@ -1,7 +1,10 @@
 import styles from "./Nav.module.scss";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import cx from "classnames";
 
-export default function Nav({ delay }) {
+export default function Nav({ mobileNav }) {
+  // data
   const list = [
     { label: "امکانات", href: "#features" },
     { label: "مناطق تحت پوشش", href: "#world-map" },
@@ -9,6 +12,21 @@ export default function Nav({ delay }) {
     { label: "خدمات", href: "#services" },
     { label: "تماس با ما", href: "#cta" },
   ];
+
+  // responsiveness
+  const [width, setWindowWidth] = useState(945);
+  useEffect(() => {
+    updateDimensions();
+
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWindowWidth(width);
+  };
+
   // hover effects
   const handelHover = function (e) {
     if (e.target.tagName.toLowerCase() === "a") {
@@ -23,21 +41,82 @@ export default function Nav({ delay }) {
     }
   };
 
-  // animations
-  const animationDelay = delay ?? 0;
+  // responsive animations
+  const linkVariants = {
+    visible: (i) => ({
+      y: 0,
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.2 + 2,
+      },
+    }),
+    visibleMobile: (i) => ({
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.2 + 0.5,
+      },
+    }),
+    hidden: {
+      y: "-200%",
+      x: 0,
+      opacity: 0,
+    },
+    hiddenMobile: {
+      x: "-200%",
+      y: 0,
+      opacity: 0,
+    },
+  };
 
+  const buttonVariants = {
+    visible: {
+      y: 0,
+      x: 0,
+      transition: { delay: 3, duration: 0.2 },
+    },
+    visibleMobile: {
+      x: 0,
+      y: 0,
+      transition: { delay: 1.5, duration: 0.2 },
+    },
+    hidden: {
+      y: "-200%",
+      x: 0,
+    },
+    hiddenMobile: {
+      x: "-200%",
+      y: 0,
+    },
+  };
+  console.log(width);
   return (
     <nav
       onMouseOver={handelHover.bind(0.3)}
       onMouseOut={handelHover.bind(1)}
-      className={styles.main}
+      className={cx(styles.main, { [styles.mobileNavOpen]: mobileNav })}
     >
       <ul className={styles.list}>
         {list.map((item, i) => (
           <motion.li
-            initial={{ y: "-200%", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: i * 0.2 + animationDelay }}
+            custom={i}
+            animate={
+              width <= 944 && mobileNav
+                ? "visibleMobile"
+                : width <= 944 && !mobileNav
+                ? "hiddenMobile"
+                : "visible"
+            }
+            initial={
+              width <= 944 && mobileNav
+                ? "hiddenMobile"
+                : width <= 944 && !mobileNav
+                ? "visibleMobile"
+                : "hidden"
+            }
+            variants={linkVariants}
             key={item.label}
           >
             <a href={item.href} className={styles.link}>
@@ -47,9 +126,21 @@ export default function Nav({ delay }) {
         ))}
         <li>
           <motion.button
-            initial={{ y: "-200%" }}
-            animate={{ y: 0 }}
-            transition={{ delay: 1 + animationDelay, duration: 0.2 }}
+            initial={
+              width <= 944 && mobileNav
+                ? "hiddenMobile"
+                : width <= 944 && !mobileNav
+                ? "visibleMobile"
+                : "hidden"
+            }
+            animate={
+              width <= 944 && mobileNav
+                ? "visibleMobile"
+                : width <= 944 && !mobileNav
+                ? "hiddenMobile"
+                : "visible"
+            }
+            variants={buttonVariants}
             className={styles.download}
           >
             دانلود اپلیکیشن برای موبایل

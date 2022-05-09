@@ -96,3 +96,9 @@
 .rate {
   transform: scaleX(-1);
 }
+
+@media screen and (max-width: 84em) {
+  .container {
+    display: none;
+  }
+}

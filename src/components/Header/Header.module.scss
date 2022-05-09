@@ -8,4 +8,74 @@
   padding: 0 $space-9;
   background-color: $color-primary;
   position: relative;
+  width: 100%;
+}
+
+.mobileNav {
+  display: none;
+  width: $space-8;
+  height: $space-8;
+  font-family: inherit;
+  border: 3px solid $color-link-hero;
+  font-weight: bold;
+  font-size: $font-size-3;
+  color: $color-secondary;
+  background-color: $color-primary;
+  border-radius: 7px;
+  padding: 0.5rem;
+  z-index: 3;
+  @include transition-base;
+}
+
+.hamburger {
+  height: 3px;
+  background-color: $color-link-hero;
+  border-radius: 2000px;
+  @include transition-base;
+}
+
+.wrapper {
+  display: none;
+}
+
+.mobileNavOpen {
+  .hamburger {
+    &:first-child {
+      transform: rotate(-45deg) translateY(5px) translateX(-5px) scaleX(1.2);
+    }
+
+    &:nth-child(2) {
+      transform: scaleX(0.5);
+      opacity: 0;
+    }
+
+    &:last-child {
+      transform: rotate(45deg) translateY(-5px) translateX(-5px) scaleX(1.2);
+    }
+  }
+
+  + .wrapper {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 59em) {
+  .container {
+    padding: 0 $space-7;
+  }
+
+  .mobileNav {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
 }

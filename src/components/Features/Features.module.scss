@@ -29,3 +29,9 @@
   justify-content: center;
   gap: $space-11;
 }
+
+@media screen and (max-width: 84em) {
+  .container {
+    display: none;
+  }
+}
