@@ -91,7 +91,6 @@ export default function Nav({ mobileNav }) {
       y: 0,
     },
   };
-  console.log(width);
   return (
     <nav
       onMouseOver={handelHover.bind(0.3)}

@@ -11,7 +11,6 @@ export default function Header() {
     // matching href to id
     if (e.target.closest("a")) {
       const id = e.target.closest("a").getAttribute("href");
-      console.log(id);
       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
     }

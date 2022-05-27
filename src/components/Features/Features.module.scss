@@ -30,8 +30,21 @@
   gap: $space-11;
 }
 
-@media screen and (max-width: 84em) {
+@media (max-width: 59em) {
+  .cardContainer {
+    gap: $space-7;
+  }
+}
+@media (max-width: 44em) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $space-10;
+  }
+}
+@media (max-width: 34em) {
   .container {
-    display: none;
+    padding: $space-8;
   }
 }

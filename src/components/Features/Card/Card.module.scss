@@ -11,7 +11,7 @@
     margin-top: $space-8;
   }
 
-  svg {
+  > svg {
     position: absolute;
     z-index: -1;
     right: -10%;
@@ -37,11 +37,6 @@
   background-color: var(--color-background);
   border-radius: 0.7rem;
   margin-bottom: $space-7;
-
-  svg {
-    position: static;
-    z-index: 0;
-  }
 }
 
 .content {
@@ -80,5 +75,63 @@
 
   &:active {
     transform: translateY(0.5rem);
+  }
+}
+
+@media (max-width: 84em) {
+  .card {
+    width: 32rem;
+  }
+}
+@media (max-width: 75em) {
+  .card {
+    width: 28rem;
+  }
+
+  .background {
+    > svg {
+      transform: scale(-90%, +90%);
+      right: -20%;
+      top: -20%;
+    }
+  }
+}
+@media (max-width: 59em) {
+  .card {
+    width: 26rem;
+    padding: $space-6;
+  }
+
+  .background {
+    > svg {
+      transform: scale(-65%, +65%);
+      right: -40%;
+      top: -30%;
+    }
+  }
+}
+@media (max-width: 44em) {
+  .card {
+    width: 100%;
+  }
+
+  .background {
+    margin-top: 0 !important ;
+
+    > svg {
+      width: 100%;
+      transform: scaleX(-1);
+      right: -10%;
+      top: -15%;
+    }
+  }
+}
+@media (max-width: 34em) {
+  .background {
+    > svg {
+      transform: scaleX(-1);
+      right: -10%;
+      top: -20%;
+    }
   }
 }
