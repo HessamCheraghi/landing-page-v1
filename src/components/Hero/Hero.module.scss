@@ -13,8 +13,10 @@
 .container {
   display: grid;
   grid-template-columns: 45fr 55fr;
-  width: 140rem;
+  max-width: 150rem;
   margin: 0 auto;
+  padding: 0 5rem;
+  position: relative;
 }
 
 .textBox {
@@ -62,8 +64,46 @@
 .img {
   transform: scaleX(-1);
 }
-@media screen and (max-width: 84em) {
-  .background {
-    display: none;
+@media (max-width: 88em) {
+  .header {
+    font-size: $font-size-9;
+  }
+}
+
+@media (max-width: 84em) {
+  .container {
+    max-width: 110rem;
+    padding: 0;
+  }
+
+  .header {
+    font-size: $font-size-8;
+  }
+
+  .subheader {
+    font-size: $font-size-5;
+  }
+}
+@media (max-width: 75em) {
+  .container {
+    grid-template-columns: 1fr;
+    margin-top: $space-10;
+    padding-inline: $space-6;
+  }
+}
+@media (max-width: 44em) {
+  .header {
+    font-size: $font-size-8;
+  }
+
+  .subheader {
+    font-size: $font-size-5;
+  }
+}
+@media (max-width: 34em) {
+  .container {
+    padding: 0;
+    margin-top: 0;
+    margin-inline: $space-6;
   }
 }

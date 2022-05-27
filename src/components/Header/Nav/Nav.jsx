@@ -56,7 +56,7 @@ export default function Nav({ mobileNav }) {
       y: 0,
       opacity: 1,
       transition: {
-        delay: i * 0.2 + 0.5,
+        delay: i * 0.11 + 0,
       },
     }),
     hidden: {
@@ -80,7 +80,7 @@ export default function Nav({ mobileNav }) {
     visibleMobile: {
       x: 0,
       y: 0,
-      transition: { delay: 1.5, duration: 0.2 },
+      transition: { delay: 0.75, duration: 0.2 },
     },
     hidden: {
       y: "-200%",
