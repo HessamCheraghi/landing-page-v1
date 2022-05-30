@@ -5,7 +5,6 @@ import WorldMap from "./components/WorldMap";
 import Reviews from "./components/Reviews";
 import Services from "./components/Services";
 import CTA from "./components/CTA";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
         <Services />
         <CTA />
       </main>
-      <Footer />
     </>
   );
 }
