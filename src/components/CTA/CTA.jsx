@@ -4,7 +4,9 @@ import phone from "images/phone.png";
 export default function CTA() {
   return (
     <div id="cta" className={styles.container}>
-      <img src={phone} alt="تلفن همراه" />
+      <div className={styles.imgBox}>
+        <img src={phone} alt="تلفن همراه" />
+      </div>
       <div className={styles.textBox}>
         <h2 className={styles.secondary}>
           عضو خبرنامه ما بشید تا از آخرین تخفیفات ما بهره مند شید

@@ -29,13 +29,14 @@
 .header {
   font-size: $font-size-10;
   margin-bottom: $space-7;
-  line-height: 1.2;
+  line-height: $font-size-11;
 }
 
 .subheader {
+  font-family: Vazirmatn, sans-serif;
   font-size: $font-size-6;
   margin-bottom: $space-8;
-  line-height: 1.5;
+  line-height: $font-size-8;
 }
 
 .download {
@@ -43,8 +44,8 @@
   font-family: inherit;
   border: 2px solid $color-link-hero;
   font-weight: bold;
-  font-size: $font-size-3;
-  padding: $space-4 $space-6;
+  font-size: $font-size-6;
+  padding: $space-4 $space-7;
   color: $color-primary;
   background-color: $color-link-hero;
   border-radius: 11px;

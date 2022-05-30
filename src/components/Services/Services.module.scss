@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: 40fr 12fr 55fr;
   grid-template-rows: repeat(2, 1fr);
-  gap: 3.2rem;
+  gap: $space-7;
   @include center-m;
 }
 
@@ -62,8 +62,14 @@
   }
 }
 
-@media screen and (max-width: 84em) {
-  .container {
-    display: none;
+@media (max-width: 84em) {
+  .grid {
+    width: 100%;
+    padding-inline: $space-7;
+  }
+}
+@media (max-width: 44em) {
+  .grid {
+    gap: $space-5;
   }
 }

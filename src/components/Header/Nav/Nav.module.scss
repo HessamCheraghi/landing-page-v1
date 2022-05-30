@@ -7,30 +7,30 @@
   gap: $space-8;
 
   li {
-    display: inline-block;
+    display: block;
   }
 }
 
 .link {
   &:link,
   &:visited {
-    display: inline-block;
+    display: block;
     text-decoration: none;
     color: $color-link-hero;
-    font-weight: normal;
-    font-size: $font-size-5;
+    font-weight: bold;
+    font-size: $font-size-6;
     @include transition-base;
   }
 }
 
 .download {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   font-family: inherit;
   border: 2px solid $color-link-hero;
   font-weight: bold;
-  font-size: $font-size-3;
-  padding: $space-4 $space-6;
+  font-size: $font-size-5;
+  padding: $space-4 $space-5;
   color: $color-primary;
   background-color: $color-link-hero;
   border-radius: 11px;
@@ -54,12 +54,15 @@
       font-size: $font-size-3;
     }
   }
+
+  .download {
+    font-size: $font-size-4;
+  }
 }
 @media (max-width: 59em) {
   .main {
     display: block;
-    background-color: $color-mobile-nav;
-    backdrop-filter: blur(10px);
+    background-color: $color-primary;
     position: fixed;
     top: 0;
     bottom: 0;

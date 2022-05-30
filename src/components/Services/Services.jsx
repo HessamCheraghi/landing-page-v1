@@ -3,52 +3,25 @@ import service1 from "images/Service1.png";
 import service2 from "images/Service2.png";
 import service3 from "images/Service3.png";
 import service4 from "images/Service4.png";
-import { motion } from "framer-motion";
 export default function Services() {
-  const variants = {
-    visible: { y: 0, opacity: 1, transition: { duration: 1 } },
-    hidden: { y: 120, opacity: 0 },
-  };
   return (
     <div id="services" className={styles.container}>
-      <motion.p
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={variants}
-        className={styles.subheading}
-      >
-        خدمات
-      </motion.p>
-      <motion.h2
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={variants}
-        className={styles.secondary}
-      >
-        راه حل ایده آل برای وسایل نقلیه شما
-      </motion.h2>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={variants}
-        className={styles.grid}
-      >
+      <p className={styles.subheading}>خدمات</p>
+      <h2 className={styles.secondary}>راه حل ایده آل برای وسایل نقلیه شما</h2>
+      <div className={styles.grid}>
         <div className={styles.item}>
-          <img src={service2} alt="" />
+          <img src={service2} alt="service2" />
         </div>
         <div className={styles.item}>
-          <img src={service1} alt="" />
+          <img src={service1} alt="service1" />
         </div>
         <div className={styles.item}>
-          <img src={service3} alt="" />
+          <img src={service3} alt="service3" />
         </div>
         <div className={styles.item}>
-          <img src={service4} alt="" />
+          <img src={service4} alt="service4" />
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

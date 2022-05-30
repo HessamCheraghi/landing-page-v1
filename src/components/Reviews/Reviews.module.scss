@@ -1,7 +1,7 @@
 @use "sass" as *;
 
 .container {
-  padding-bottom: $space-12;
+  margin-bottom: $space-12;
   background-image: url("../../images/Review.svg");
   background-position: center 70%;
   background-repeat: no-repeat;
@@ -65,9 +65,11 @@
 }
 
 .text {
-  font-size: $font-size-3;
-  line-height: $font-size-6;
+  font-family: Vazirmatn, sans-serif;
+  font-size: $font-size-4;
+  line-height: $font-size-7;
   margin-bottom: $space-6;
+  text-align: justify;
 }
 
 .avatarBox {
@@ -143,6 +145,14 @@
   }
 }
 @media (max-width: 44em) {
+  .container {
+    margin-bottom: 0;
+  }
+
+  .secondary {
+    margin-bottom: $space-4;
+  }
+
   .cardContainer {
     display: flex;
     flex-direction: column;
@@ -155,10 +165,8 @@
   }
 
   .text {
-    font-family: Vazirmatn, sans-serif;
     font-size: $font-size-4;
     line-height: $font-size-7;
-    text-align: justify;
   }
 }
 @media (max-width: 34em) {
@@ -167,6 +175,6 @@
   }
 
   .cardContainer {
-    padding: $space-8;
+    padding: $space-7;
   }
 }

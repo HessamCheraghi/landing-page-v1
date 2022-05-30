@@ -29,3 +29,8 @@
 .map {
   @include center-m;
 }
+@media (max-width: 44em) {
+  .container {
+    margin-bottom: $space-6;
+  }
+}

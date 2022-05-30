@@ -14,7 +14,7 @@ export default function Hero() {
       >
         <div className={styles.textBox}>
           <h1 className={styles.header}>
-            هر جا که به کمک فوری نیاز داشتید
+            هر جا به کمک فوری نیاز داشتید
             <br />
             ما اونجا هستیم
           </h1>
