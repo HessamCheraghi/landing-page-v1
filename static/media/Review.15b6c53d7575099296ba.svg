@@ -1,0 +1,53 @@
+<svg
+  width="1121"
+  height="1125"
+  viewBox="0 0 1121 1125"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    opacity="0.2"
+    cx="561"
+    cy="643"
+    r="446.5"
+    stroke="#F5BEC5"
+    stroke-width="3"
+  />
+  <circle
+    opacity="0.2"
+    cx="561"
+    cy="643"
+    r="366.302"
+    stroke="#F5BEC5"
+    stroke-width="3"
+  />
+  <circle
+    opacity="0.2"
+    cx="561"
+    cy="643"
+    r="277.809"
+    stroke="#F5BEC5"
+    stroke-width="3"
+  />
+  <circle
+    opacity="0.2"
+    cx="561"
+    cy="643"
+    r="210.056"
+    stroke="#F5BEC5"
+    stroke-width="3"
+  />
+  <circle
+    opacity="0.2"
+    cx="561"
+    cy="643"
+    r="136.772"
+    stroke="#F5BEC5"
+    stroke-width="3"
+  />
+  <path
+    opacity="0.4"
+    d="M520.976 428.599C455.457 440.629 192.008 310.936 184.379 418.962C186.293 429.911 217.77 578.879 235.188 673.01C308.672 1070.14 525.81 921.604 634.416 846.071C769.272 653.59 839.89 849.949 900.408 770.139C976.055 670.375 967.853 604.1 960.194 434.441C952.535 264.783 843.918 294.901 732.579 248.6C617.279 167.819 646.684 421.556 520.976 428.599Z"
+    fill="#FDD7DC"
+  />
+</svg>
